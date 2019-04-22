@@ -51,13 +51,13 @@ function cuffed(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/me çàëîìèë ðóêó ÷åëîâåêó íàïðîòèâ.")
+			sampSendChat("/me заломил руку человеку напротив.")
 			wait(15)
-			sampSendChat("/do Íàðó÷íèêè íà ïîÿñå.")
+			sampSendChat("/do Наручники на поясе.")
 			wait(15)
 			sampSendChat("/cuff " .. id)
 		else
-			sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1)
+			sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1)
 		end
 	end)
 end
@@ -66,13 +66,13 @@ function uncuff(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/me ïðîòÿíóë ðóêó â êàðìàí, èç êîòîðîãî äîñòàë êëþ÷è îò íàðó÷íèêîâ.")
+			sampSendChat("/me протянул руку в карман, из которого достал ключи от наручников.")
 			wait(100)
 			sampSendChat("/uncuff " .. id)
 			wait(100)
-			sampSendChat("/me ïîâåñèë íàðó÷íèêè íà ïîÿñ.")
+			sampSendChat("/me повесил наручники на пояс.")
 		else
-			sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1)
+			sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1)
 		end
 	end)
 end
@@ -81,14 +81,14 @@ function frisked(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/do Íà ïîÿñå îòêðûòà ñóìêà.")
+			sampSendChat("/do На поясе открыта сумка.")
 			wait(800)
-			sampSendChat("/me ðåçêèì äâèæåíèåì ðóêè äîñòàë îðäåð è ïåð÷àòêè èç ñóìêè.")
+			sampSendChat("/me резким движением руки достал ордер и перчатки из сумки.")
 			wait(800)
-			sampSendChat("/me ïðåäúÿâèë îðäåð íà îáûñê, çàòåì óáðàë åãî â ñóìêó è íàäåë ïåð÷àòêè.")
+			sampSendChat("/me предъявил ордер на обыск, затем убрал его в сумку и надел перчатки.")
 			wait(800)
 			sampSendChat("/frisk " .. id)
-		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1) end
+		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1) end
 	end)
 end
 
@@ -96,12 +96,12 @@ function shipped(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/do Ëåíòà ñ øèïàìè ãîòîâà.")
+			sampSendChat("/do Лента с шипами готова.")
 			wait(300)
-			sampSendChat("/me ïðîòÿíóë ðóêó ê êíîïêå è íàæàë íà êíîïêó.")
+			sampSendChat("/me протянул руку к кнопке и нажал на кнопку.")
 			wait(300)
 			sampSendChat("/ship " .. id)
-		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1) end
+		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1) end
 	end)
 end
 
@@ -109,11 +109,11 @@ function findgun(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/do Îòêðûòàÿ ñóìêà íà ïîÿñå.")
+			sampSendChat("/do Открытая сумка на поясе.")
 			wait(1000)
-			sampSendChat("/me ëåãêèì äâèæåíèåì ðóêè äîñòàë îðäåð è ïåð÷àòêè èç ñóìêè.")
+			sampSendChat("/me легким движением руки достал ордер и перчатки из сумки.")
 			wait(1000)
-			sampSendChat("/me ïðåäúÿâèë îðäåð íà îáûñê, çàòåì óáðàë åãî â ñóìêó è íàäåë ïåð÷àòêè.")
+			sampSendChat("/me предъявил ордер на обыск, затем убрал его в сумку и надел перчатки.")
 			wait(1000)
 			sampSendChat("/findgun " .. id)
 		end
@@ -124,22 +124,22 @@ function carin(params)
 	lua_thread.create(function()
 		local a, b = params:match("(.+)%s+(.+)")
 		if a and b ~= nil then
-			sampSendChat("/me âçÿë ïðåñòóïíèêà çà øêèðêó, îòêðûë äâåðü ìàøèíû, ïîñëå ÷åãî..")
+			sampSendChat("/me взял преступника за шкирку, открыл дверь машины, после чего..")
 			wait(300)
-			sampSendChat("/do .. áðîñèë ïðåñòóïíèêà â ìàøèíó è çàêðûë äâåðü.")
+			sampSendChat("/do .. бросил преступника в машину и закрыл дверь.")
 			wait(300)
 			sampSendChat("/incar " .. a .. " " .. b)
-		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1) end
+		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1) end
 	end)
 end
 
 function docs(params)
 	lua_thread.create(function()
-		sampSendChat("Çäðàâñòâóéòå, âàñ áåñïîêîèò Íà÷àëüíèê ÔÑÎ Àëåêñàíäð Êîñêîð.")
+		sampSendChat("Здравствуйте, вас беспокоит Начальник ФСО Александр Коскор.")
 		wait(1500)
-		sampSendChat("Ïðåäúÿâèòå âàøè äîêóìåíòû óäîñòîâåðÿþùèå ëè÷íîñòü...")
+		sampSendChat("Предъявите ваши документы удостоверяющие личность...")
 		wait(1400)
-		sampSendChat("Â ñëó÷àå íåïîä÷èíåíèÿ áóäóò ïðèíÿòû ìåðû.")
+		sampSendChat("В случае неподчинения будут приняты меры.")
 	end)
 end
 
@@ -147,10 +147,10 @@ function knockouted(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/me ñ ðàçáåãó, íàíîñèò óäàð â îáëàñòü ãðóäè ÷åëîâåêà íàïðîòèâ.")
+			sampSendChat("/me с разбегу, наносит удар в область груди человека напротив.")
 			wait(15)
 			sampSendChat("/ko " .. id)
-		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1) end
+		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1) end
 	end)
 end
 
@@ -158,139 +158,139 @@ function ud(params)
 	lua_thread.create(function()
 		id = tonumber(params)
 		if params and id ~= nil then
-			sampSendChat("/do Â êàðìàíå ïèäæàêà ëåæèò óäîñòîâåðåíèå.")
+			sampSendChat("/do В кармане пиджака лежит удостоверение.")
 			wait(1000)
-			sampSendChat("/me äîñòàë óäîñòîâåðåíèå èç ïèäæàêà è ïîêàçàë ÷åëîâåêó íàïðîòèâ ")
+			sampSendChat("/me достал удостоверение из пиджака и показал человеку напротив ")
 			wait(500)
 			sampSendChat("/ud " .. id)
 			wait(1000)
-			sampSendChat("/me óáðàë óäîñòîâåðåíèå îáðàòíî â ïèäæàê.")
-		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Âû íå ââåëè ïàðàìåòð !", -1) end
+			sampSendChat("/me убрал удостоверение обратно в пиджак.")
+		else sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Вы не ввели параметр !", -1) end
 	end)
 end
 
 function reload()
-	sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Èíèöèàëèçèðîâàíà ïåðåçàãðóçêà ñêðèïòà!")
-	sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Ïåðåçàãðóçêà áóäåò âûïîëíåíà íåìåäëåííî!")
+	sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Инициализирована перезагрузка скрипта!")
+	sampAddChatMessage("{ffffff}* [{1FAEE9}Helper{ffffff}]: Перезагрузка будет выполнена немедленно!")
 	thisScript():reload()
 end
 
 function cudo(params)
 	lua_thread.create(function()
-		sampSendChat("/me ïðèïîäíÿâ ïðàâóþ ðóêó ââåðõ, ìåäëåííî ùåëêíóë ïàëüöàìè.")
+		sampSendChat("/me приподняв правую руку вверх, медленно щелкнул пальцами.")
 		wait(900)
-		sampSendChat("/do È òóò, íàñòèãëî íåèçâåñòíûõ ëþäåé ÷óäî òåìíîå.")
+		sampSendChat("/do И тут, настигло неизвестных людей чудо темное.")
 	end)
 end
 
 function rptime(params)
 	lua_thread.create(function()
-		sampSendChat("/me îòîãíóâ ðóêàâ íà ëåâîé ðóêå, ïîñìîòðåë íà ÷àñû ìàðêè *Rish Bish*")
+		sampSendChat("/me отогнув рукав на левой руке, посмотрел на часы марки *Rish Bish*")
 		wait(200)
 		sampSendChat("/time ")
 		wait(650)
-		sampSendChat("/do Âðåìÿ íà ÷àñàõ áûëî ïðÿì òî, ÷òî íàäî äëÿ äóøè.")
+		sampSendChat("/do Время на часах было прям то, что надо для души.")
 	end)
 end
 
 function hhelp(params)
-	sampAddChatMessage("{4169E1}Êîìàíäû: {ffffff}cuff - ðï cuff. | frisk - ðï frisk. | shi - ðï øèïû. | findgun - ðï findgun.")
-	sampAddChatMessage("{4169E1}Êîìàíäû: {ffffff}incar - ðï incar. | docs - òðåáîâàòü äîêóìåíòû. | hvat - ïî ðï ñõàòèòü çà íàðó÷íèêè.")
-	sampAddChatMessage("{4169E1}Êîìàíäû: {ffffff}vignat1 - ïðîñüáà ïîêèíóòü çäàíèå. | vignat2 - çàëîìèòü ðóêó è âûâåñòè. | vignat3 - íåéòðàëèçîâàòü è âûâåñòè.")
+	sampAddChatMessage("{4169E1}Команды: {ffffff}cuff - рп cuff. | frisk - рп frisk. | shi - рп шипы. | findgun - рп findgun.")
+	sampAddChatMessage("{4169E1}Команды: {ffffff}incar - рп incar. | docs - требовать документы. | hvat - по рп схатить за наручники.")
+	sampAddChatMessage("{4169E1}Команды: {ffffff}vignat1 - просьба покинуть здание. | vignat2 - заломить руку и вывести. | vignat3 - нейтрализовать и вывести.")
 end
 
 function vignat1(params)
 	lua_thread.create(function()
-	sampSendChat("Òîâàðèùü, ïðîøó âàñ ïîêèíóòü çäàíèå ïðàâèòåëüñòâà, èëè ÿ áóäó âûíóæäåí ïðèìåíèòü ñèëó.")
+	sampSendChat("Товарищь, прошу вас покинуть здание правительства, или я буду вынужден применить силу.")
 	end)
 end
 
 function vignat2(params)
 	lua_thread.create(function()
-		sampSendChat("/me çàëîìèë ðóêó íàðóøèòåëþ.")
+		sampSendChat("/me заломил руку нарушителю.")
 		wait(700)
-		sampSendChat("/me âûâîäèò íàðóøèòåëÿ èç çäàíèÿ ïðàâèòåëüñòâà.")
+		sampSendChat("/me выводит нарушителя из здания правительства.")
 	end)
 end
 
 function vignat3(params)
 	lua_thread.create(function()
-	sampSendChat("/me äîñòàë äóáèíêó.")
+	sampSendChat("/me достал дубинку.")
 	wait(700)
-	sampSendChat("/me íåéòðàëèçîâàë íàðóøèòåëÿ äóáèíêîé.")
+	sampSendChat("/me нейтрализовал нарушителя дубинкой.")
 	wait(700)
-	sampSendChat("/do íàðóøèòåëü íåéòðàëèçîâàí.")
+	sampSendChat("/do нарушитель нейтрализован.")
 	wait(700)
-	sampSendChat("/me ïîäíÿë íàðóøèòåëÿ.")
+	sampSendChat("/me поднял нарушителя.")
 	wait(700)
-	sampSendChat("/me âûâåë íàðóøèòåëÿ èç çäàíèÿ ïðàâèòåëüñòâà.")
+	sampSendChat("/me вывел нарушителя из здания правительства.")
 	end)
 end
 
 function naborfso1(params)
 	lua_thread.create(function()
-		sampSendChat("Çäðàâñòâóéòå, ìåíÿ çîâóò Àëåêñàíäð Êîñêîð.")
+		sampSendChat("Здравствуйте, меня зовут Александр Коскор.")
 		wait(500)
-		sampSendChat("Âû ïðèøëè íà ñîáåñåäîâàíèå?")
+		sampSendChat("Вы пришли на собеседование?")
 	end)
 end
 
 function naborfso2(params)
 	lua_thread.create(function()
-		sampSendChat("/todo Òàê è çíàë, ïîêàæèòå âàøè äîêóìåíòû. * ïðîòÿãèâàÿ ðóêó ê ñîáåñåäíèêó.")
+		sampSendChat("/todo Так и знал, покажите ваши документы. * протягивая руку к собеседнику.")
 	end)
 end
 
 function naborfso3(params)
 	lua_thread.create(function()
-		sampSendChat("/todo Õîðîøî, ñêàæèòå ÷òî òàêîå ïî âàøåìó ôîðóì? * ïðîòÿãèâàÿ ðóêó ñ äîêóìåíòàìè îáðàòíî ñîáåñåäíèêó.")
+		sampSendChat("/todo Хорошо, скажите что такое по вашему форум? * протягивая руку с документами обратно собеседнику.")
 	end)
 end
 
 function naborfso4(params)
 	lua_thread.create(function()
-		sampSendChat("Óãó... Òåïåðü ðàññêàæèòå îáÿçàíîñòè àãåíòà ÔÑÎ. ")
+		sampSendChat("Угу... Теперь расскажите обязаности агента ФСО. ")
 	end)
 end
 
 function nepodhod(params)
 	lua_thread.create(function()
-		sampSendChat("Èçâèíèòå, âû íàì íå ïîäõîäèòå.")
+		sampSendChat("Извините, вы нам не подходите.")
 	end)
 end
 
 function molitva(params)
 	lua_thread.create(function()
-		sampSendChat("/me ìåäëåííî âñòàë íà êîëåíè è âîçíåñ ðóêè ââåðõ.")
+		sampSendChat("/me медленно встал на колени и вознес руки вверх.")
 		wait(350)
-		sampSendChat("/do Ðóêè ñëåãêà ðàçâåäåíû ïî ñòîðîíàì.")
+		sampSendChat("/do Руки слегка разведены по сторонам.")
 		wait(1000)
-		sampSendChat("[Ìîëèòñÿ]: Ïóòü Áåçäíû  Îäèíà äîðîãà,")
+		sampSendChat("[Молится]: Путь Бездны – Одина дорога,")
 		wait(2100)
-		sampSendChat("[Ìîëèòñÿ]: Ñâÿçàëà íàñ  ëþäåé, ñ ñóäüáîé Çåìëè,")
+		sampSendChat("[Молится]: Связала нас – людей, с судьбой Земли,")
 		wait(2400)
-		sampSendChat("[Ìîëèòñÿ]: Îòåö íåáåñíûé  Îäèí  Áîã íàø  Ñëàâà Ðîäó!")
+		sampSendChat("[Молится]: Отец небесный – Один – Бог наш – Слава Роду!")
 		wait(2400)
-		sampSendChat("[Ìîëèòñÿ]: ×åðåç Òåáÿ ê Âñåâûøíåìó ìîëüáó âîçíîñèì ìû,")
+		sampSendChat("[Молится]: Через Тебя к Всевышнему мольбу возносим мы,")
 		wait(2400)
-		sampSendChat("[Ìîëèòñÿ]: È ×àøó æèçíè ïîëíèì, ëþáîâüþ ïðåòâîðÿÿ â æèçíü ìå÷òó ")
+		sampSendChat("[Молится]: И Чашу жизни полним, любовью претворяя в жизнь мечту …")
 		wait(2400)
-		sampSendChat("[Ìîëèòñÿ]: Âåäè âïåðåä íàñ, Îäèí, äîëã ìû ñâîé èñïîëíèì!")
+		sampSendChat("[Молится]: Веди вперед нас, Один, долг мы свой исполним!")
 		wait(2400)
-		sampSendChat("[Ìîëèòñÿ]: È ×àøó æèçíè, è ñâîþ ñóäüáó ïðèåìëåì âñ¸, êàê äàð áåñöåííûé,")
+		sampSendChat("[Молится]: И Чашу жизни, и свою судьбу приемлем всё, как дар бесценный,")
 		wait(2300)
-		sampSendChat("[Ìîëèòñÿ]: Íàïðàâü íà ïðàâóþ ñòåçþ: Îòåö Âñåâûøíèé, Âñåäåðæèòåëü, Ïåðâûé!")
+		sampSendChat("[Молится]: Направь на правую стезю: Отец Всевышний, Вседержитель, Первый!")
 		wait(2200)
-		sampSendChat("/me îïóñòèë ðóêè è ïîìîë÷àâ êàêîå-òî âðåìÿ âñòàë ñ êîëåí.")
+		sampSendChat("/me опустил руки и помолчав какое-то время встал с колен.")
 		wait(1800)
-		sampSendChat("/do Â ãëàçàõ áëåñòíóëà èñêðà.")
+		sampSendChat("/do В глазах блестнула искра.")
 	end)
 end
 
 function hvat(params)
 	lua_thread.create(function()
-	sampSendChat("/me ðåçêèì äâèæåíèåì ðóêè ñõâàòèë ÷åëîâåêà çà íàðó÷íèêè..")
+	sampSendChat("/me резким движением руки схватил человека за наручники..")
 	wait(700)
-	sampSendChat("/me ..è ãðóáî ïîâ¸ë çà ñîáîé.")
+	sampSendChat("/me ..и грубо повёл за собой.")
 	end)
 end
