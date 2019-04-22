@@ -1,6 +1,6 @@
 script_name("Helper")
-script_description("äîðàáîòêà...")
-script_version("V1.0")
+script_description("Доработка")
+script_version("1.0.0")
 script_author("AlexFLIX")
 script_dependencies("SAMPFUNCS, SAMP")
 
@@ -18,7 +18,7 @@ function main()
     wait(1000)
   end
   if jstart == 1 then
-    sampAddChatMessage("{ffffff}* [Helper]: Ñïåöèàëüíûé ñêðèïò äëÿ ñâîèõ ïîöûêîâ çàãðóæåí. {ffffff}Âåðñèÿ ñêðèïòà: 0.1.")
+    sampAddChatMessage("{ffffff}* [Helper]: Скрипт загружен. {ffffff}Версия скрипта: 1.0.0")
   elseif jstart == 2 then
     sampfuncsLog("{ffffff}* [Helper]:  test...")
   end
