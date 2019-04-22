@@ -1,4 +1,4 @@
-script_name("Helper") алортшоаптршавтшрташвтршвартавр
+script_name("Helper")
 script_description("äîðàáîòêà...")
 script_version("V1.0")
 script_author("AlexFLIX")
