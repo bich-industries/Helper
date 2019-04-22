@@ -18,7 +18,7 @@ function main()
     wait(1000)
   end
   if jstart == 1 then
-    sampAddChatMessage("{ffffff}* [Helper]: Скрипт загружен. {ffffff}Версия скрипта: 1.0.0")
+    sampAddChatMessage("{ffffff}* [Helper]: Скрипт загруженн. {ffffff}Версия скрипта: 1.0.0")
   elseif jstart == 2 then
     sampfuncsLog("{ffffff}* [Helper]:  test...")
   end
