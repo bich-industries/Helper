@@ -283,7 +283,7 @@ function molitva(params)
 		wait(2200)
 		sampSendChat("/me опустил руки и помолчав какое-то время встал с колен.")
 		wait(1800)
-		sampSendChat("/do В глазах блестнула искра.")
+		sampSendChat("/do В глазах блеснула искра.")
 	end)
 end
 
